@@ -1,12 +1,12 @@
-const assertArraysEqual = function(actualArray, expectedArray) {
-  const assertionPassed = `😘 😘 😘 Array Assertion Passed: ${actualArray} === ${expectedArray}`;
-  const assertionFaied = `😰 😰 😰 Array Assertion failed: ${actualArray} !== ${expectedArray}`;
+const assertArraysEqual = function(actual, expected) {
+  const assertionPassed = `😘 😘 😘 Array Assertion Passed: ${actual} === ${expected}`;
+  const assertionFaied = `😰 😰 😰 Array Assertion failed: ${actual} !== ${expected}`;
   
-  if (actualArray.length !== expectedArray.length) {
+  if (actual.length !== expected.length) {
     console.log(assertionFaied);
   }
-  for (const index in actualArray) {
-    if (actualArray[index] !== expectedArray[index]) {
+  for (const index in actual) {
+    if (actual[index] !== expected[index]) {
       console.log(assertionFaied);
     }
   }
