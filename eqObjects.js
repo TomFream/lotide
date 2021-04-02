@@ -2,9 +2,9 @@ const assertEqual = function(actual, expected) {
   const assertionPassed = `😘 😘 😘 Assertion Passed: ${actual} === ${expected}`;
   const assertionFaied = `😰 😰 😰 Assertion failed: ${actual} !== ${expected}`;
   if (actual === expected) {
-    console.log(assertionPassed);
+    return assertionPassed;
   } else {
-    console.log(assertionFaied);
+    return assertionFaied;
   }
 };
 
@@ -50,18 +50,18 @@ const eqObjects = function(object1, object2) {
 console.log("primitive test cases:");
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
-assertEqual(eqObjects(ab, ba), true);
+console.log(assertEqual(eqObjects(ab, ba), true));
 
 const abc = { a: "1", b: "2", c: "3" };
-assertEqual(eqObjects(ab, abc), false);
+console.log(assertEqual(eqObjects(ab, abc), false));
 console.log();
 
 // Test cases - array values
 console.log("Array test cases:");
 const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };
-assertEqual(eqObjects(cd, dc), true);
+console.log(assertEqual(eqObjects(cd, dc), true));
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
-assertEqual(eqObjects(cd, cd2), false);
+console.log(assertEqual(eqObjects(cd, cd2), false));
 console.log();

@@ -2,9 +2,9 @@ const assertEqual = function(actual, expected) {
   const assertionPassed = `😘 😘 😘 Assertion Passed: ${actual} === ${expected}`;
   const assertionFaied = `😰 😰 😰 Assertion failed: ${actual} !== ${expected}`;
   if (actual === expected) {
-    console.log(assertionPassed);
+    return assertionPassed;
   } else {
-    console.log(assertionFaied);
+    return assertionFaied;
   }
 };
 
@@ -24,6 +24,6 @@ const countLetters = function(str) {
 // Test case
 const result1 = countLetters("Lighthouse labs in the house");
 console.log(result1);
-assertEqual(result1["l"], 2);
-assertEqual(result1["h"], 4);
-assertEqual(result1["a"], 1);
+console.log(assertEqual(result1["l"], 2));
+console.log(assertEqual(result1["h"], 4));
+console.log(assertEqual(result1["a"], 1));
