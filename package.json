@@ -1,0 +1,26 @@
+{
+  "name": "@tomfream/lotide",
+  "version": "1.0.0",
+  "description": "Lotide project package",
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "author": "Tom Fream",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TomFream/lotide/issues"
+  },
+  "homepage": "https://github.com/TomFream/lotide#readme",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2"
+  }
+}

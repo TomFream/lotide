@@ -1,27 +1,3 @@
-// Assert functions
-const eqArrays = function(firstArray, secondArray) {
-  if (firstArray.length !== secondArray.length) {
-    return false;
-  }
-  for (const index in firstArray) {
-    if (firstArray[index] !== secondArray[index]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-const assertArraysEqual = function(actual, expected) {
-  const assertionPassed = `😘 😘 😘 Array Assertion Passed: ${actual} === ${expected}`;
-  const assertionFaied = `😰 😰 😰 Array Assertion failed: ${actual} !== ${expected}`;
-  
-  if (eqArrays(actual, expected)) {
-    return  assertionPassed;
-  }
-  return assertionFaied;
-};
-
-// Map finction implementation
 const map = function(array, callback) {
   const results = [];
   for (let item of array) {

@@ -1,15 +1,3 @@
-// Assert function
-const assertEqual = function(actual, expected) {
-  const assertionPassed = `😘 😘 😘 Assertion Passed: ${actual} === ${expected}`;
-  const assertionFaied = `😰 😰 😰 Assertion failed: ${actual} !== ${expected}`;
-  if (actual === expected) {
-    return assertionPassed;
-  } else {
-    return assertionFaied;
-  }
-};
-
-// findKey function implementation
 const findKey = function(object, callback) {
   const objKeys = Object.keys(object);
   for (let key of objKeys) {

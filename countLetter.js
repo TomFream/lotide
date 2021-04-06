@@ -1,13 +1,3 @@
-const assertEqual = function(actual, expected) {
-  const assertionPassed = `😘 😘 😘 Assertion Passed: ${actual} === ${expected}`;
-  const assertionFaied = `😰 😰 😰 Assertion failed: ${actual} !== ${expected}`;
-  if (actual === expected) {
-    return assertionPassed;
-  } else {
-    return assertionFaied;
-  }
-};
-
 const countLetter = function(str) {
   const countObj = {};
   str = str.replace(/\s/g, '').toLowerCase();

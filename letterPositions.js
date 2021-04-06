@@ -1,18 +1,3 @@
-// const assertArraysEqual = function(actualArray, expectedArray) {
-//   const assertionPassed = `😘 😘 😘 Array Assertion Passed: ${actualArray} === ${expectedArray}`;
-//   const assertionFaied = `😰 😰 😰 Array Assertion failed: ${actualArray} !== ${expectedArray}`;
-  
-//   if (actualArray.length !== expectedArray.length) {
-//     console.log(assertionFaied);
-//   }
-//   for (const index in actualArray) {
-//     if (actualArray[index] !== expectedArray[index]) {
-//       console.log(assertionFaied);
-//     }
-//   }
-//   console.log(assertionPassed);
-// };
-
 const letterPositions = function(str) {
   const results = {};
   str = str.replace(/\s/g, '').toLowerCase();

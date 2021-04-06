@@ -1,27 +1,3 @@
-// // Assert functions
-// const eqArrays = function(firstArray, secondArray) {
-//   if (firstArray.length !== secondArray.length) {
-//     return false;
-//   }
-//   for (const index in firstArray) {
-//     if (firstArray[index] !== secondArray[index]) {
-//       return false;
-//     }
-//   }
-//   return true;
-// };
-
-// const assertArraysEqual = function(actual, expected) {
-//   const assertionPassed = `😘 😘 😘 Array Assertion Passed: ${actual} === ${expected}`;
-//   const assertionFaied = `😰 😰 😰 Array Assertion failed: ${actual} !== ${expected}`;
-  
-//   if (eqArrays(actual, expected)) {
-//     return  assertionPassed;
-//   }
-//   return assertionFaied;
-// };
-
-// takeUntil function implementation
 const takeUntil = function(array, callback) {
   const returnArr = [];
   for (const element of array)
