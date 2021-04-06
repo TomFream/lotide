@@ -8,7 +8,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const countLetters = function(str) {
+const countLetter = function(str) {
   const countObj = {};
   str = str.replace(/\s/g, '').toLowerCase();
   for (const letter of str) {
@@ -19,11 +19,13 @@ const countLetters = function(str) {
     }
   }
   return countObj;
-} 
+};
 
-// Test case
-const result1 = countLetters("Lighthouse labs in the house");
-console.log(result1);
-console.log(assertEqual(result1["l"], 2));
-console.log(assertEqual(result1["h"], 4));
-console.log(assertEqual(result1["a"], 1));
+module.exports = countLetter;
+
+// // Test case
+// const result1 = countLetters("Lighthouse labs in the house");
+// console.log(result1);
+// console.log(assertEqual(result1["l"], 2));
+// console.log(assertEqual(result1["h"], 4));
+// console.log(assertEqual(result1["a"], 1));

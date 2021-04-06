@@ -29,11 +29,11 @@ const assertObjectsEqual = function(actual, expected) {
     }
     if (Array.isArray(actual[key]) && Array.isArray(expected[key])) {   //Check if key values are arrays - if so, test if they are equal
       if (!eqArrays(actual[key], expected[key])) {
-        return assertionFaied;    
-      }
-    } else if (actual[key] !== expected[key]) {    //Check that both objects have the same value for each key
         return assertionFaied;
       }
+    } else if (actual[key] !== expected[key]) {    //Check that both objects have the same value for each key
+      return assertionFaied;
+    }
   }
   return assertionPassed;
 };
