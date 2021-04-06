@@ -1,13 +1,14 @@
 const tail = require('../tail');
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 
-// Test 1: Check returned array elements
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-console.log(assertEqual(result.length, 2));
-console.log(assertEqual(result[0], "Lighthouse"));
-console.log(assertEqual(result[1], "Labs"));
-
-// Test 2: Check the original array
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words);
-console.log(assertEqual(words.length, 3));
+describe ("#tail", () => {
+  it("returns ['Lighthouse', 'Labs'] for ['Hello', 'Lighthouse', 'Labs']", () => {
+    assert.deepEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
+  });
+  it("given an empty array, return empty array", () => {
+    assert.deepEqual(tail([]), []);
+  });
+  it("given an array of one element, return empty array", () => {
+    assert.deepEqual(tail(["Lighthouse"]), []);
+  });
+});
