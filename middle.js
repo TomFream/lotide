@@ -1,20 +1,5 @@
-// Assertion Functions
-const assertArraysEqual = function(actualArray, expectedArray) {
-  const assertionPassed = `😘 😘 😘 Array Assertion Passed: ${actualArray} === ${expectedArray}`;
-  const assertionFaied = `😰 😰 😰 Array Assertion failed: ${actualArray} !== ${expectedArray}`;
-  
-  if (actualArray.length !== expectedArray.length) {
-    return assertionFaied;
-  }
-  for (const index in actualArray) {
-    if (actualArray[index] !== expectedArray[index]) {
-      return assertionFaied;
-    }
-  }
-  return assertionPassed;
-};
+const assertArraysEqual = require('./assertArraysEqual');
 
-// Middle Function
 const middle = function(arr) {
   const middleArray = [];
   const midIndex = arr.length / 2;
@@ -29,14 +14,4 @@ const middle = function(arr) {
   return middleArray;
 };
 
-// Test one or two elements
-console.log(assertArraysEqual(middle([1]), []));
-console.log(assertArraysEqual(middle([1, 2]), []));
-
-// Test odd
-console.log(assertArraysEqual(middle([1, 2, 3]), [2]));
-console.log(assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]));
-
-// Test even
-console.log(assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]));
-console.log(assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]));
+module.exports = middle;
